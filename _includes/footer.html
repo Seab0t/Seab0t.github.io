@@ -1,41 +1,41 @@
 <style>
-  /* 强制撑开页面高度，把 Footer 压到最底部 */
-  html, body {
-    height: 100%;
-    margin: 0;
-  }
-  
-  #page-wrapper {
-    min-height: 100vh;
+  /* 1. 接管 body：强制满屏并设为弹性盒子 */
+  body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh; /* 最小高度为 100% 视口高度 */
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  /* 修复系统自带的 wrapper 使其占据剩余空间 */
-  .initial-content {
+  /* 2. 核心魔法：让正文区域像弹簧一样撑开所有剩余空间 */
+  .initial-content, #main {
     flex: 1 0 auto;
   }
 
+  /* 3. 剥夺系统自带 Footer 的所有多余留白 */
   .page__footer {
-    margin-top: 5rem !important; 
+    margin-top: auto !important; /* 关键：有剩余空间时，自动把它顶到最底下 */
+    margin-bottom: 0 !important; /* 强制消除底部的神秘空白 */
     padding: 0 !important;
     width: 100%;
-    flex-shrink: 0; /* 防止 footer 被挤压 */
+    flex-shrink: 0;
   }
 
-  /* 现代左右分栏 Footer 设计 */
+  /* 自定义极简 Footer 样式 */
   .custom-minimal-footer {
     background-color: #f8f9fa;
     border-top: 1px solid #e9ecef;
     padding: 2rem 20px;
     width: 100%;
+    box-sizing: border-box; /* 防止 padding 导致元素溢出产生滚动条/空白 */
   }
 
   .custom-minimal-footer-inner {
     max-width: 950px; 
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* 将版权和链接分别推向左右两端 */
+    justify-content: space-between;
     align-items: center;
     color: #6c757d; 
     font-size: 0.9rem;
@@ -52,7 +52,7 @@
     font-weight: 500;
     display: flex;
     align-items: center;
-    gap: 6px; /* 图标和文字的间距 */
+    gap: 6px;
     transition: color 0.2s ease;
   }
 
@@ -60,14 +60,12 @@
     color: #2c3e50; 
   }
 
-  /* SVG 图标样式控制 */
   .footer-svg-icon {
     width: 18px;
     height: 18px;
-    fill: currentColor; /* 让图标颜色自动跟随文字颜色变化 */
+    fill: currentColor; 
   }
 
-  /* 移动端自动变成上下居中堆叠 */
   @media (max-width: 600px) {
     .custom-minimal-footer-inner {
       flex-direction: column;

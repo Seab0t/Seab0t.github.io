@@ -1,6 +1,7 @@
 ---
 title: "Evaluating Congestion Pricing Impacts on Commuter Behavior"
 collection: portfolio
+layout: portfolio-item
 header:
   teaser: https://Seab0t.github.io/images/Congestion.png
 share: false

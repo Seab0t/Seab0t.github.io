@@ -46,4 +46,103 @@ layout: default
   .meta-title {
     font-size: 0.75rem;
     text-transform: uppercase; /* 强制大写，极其学术、现代 */
-    letter-spacing: 0.1
+    letter-spacing: 0.1em;
+    color: #888;
+    margin-bottom: 6px;
+  }
+
+  .meta-detail {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #000;
+  }
+
+  /* 4. 正文排版：极其干净的阅读体验 */
+  .portfolio-content-body {
+    margin-top: 40px;
+    font-size: 1.15rem; /* 字号放大，适合阅读 */
+    line-height: 1.8;
+  }
+
+  /* 所有的二级/三级标题直接靠字号和黑度区分，没有任何修饰 */
+  .portfolio-content-body h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+    color: #000;
+  }
+
+  /* 极其克制的图片边距，无边框 */
+  .portfolio-content-body img {
+    margin: 2rem 0;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  /* 5. 极简黑白操作按钮 */
+  .action-buttons {
+    display: flex; gap: 15px; margin-top: 5rem; margin-bottom: 4rem;
+  }
+  .btn-minimal {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 500; font-size: 0.95rem;
+    text-decoration: none !important; transition: all 0.2s;
+  }
+  .btn-black { background-color: #000; color: #fff !important; }
+  .btn-black:hover { background-color: #333; }
+  .btn-outline { background-color: #fff; color: #000 !important; border: 1px solid #ccc; }
+  .btn-outline:hover { border-color: #000; }
+</style>
+
+<div class="portfolio-page-container">
+  
+  <header class="sticky-project-header">
+    <h1>{{ page.title }}</h1>
+    
+    <div class="typography-meta-info">
+      {% if page.project_role %}
+      <div class="meta-block">
+        <span class="meta-title">Role</span>
+        <span class="meta-detail">{{ page.project_role }}</span>
+      </div>
+      {% endif %}
+      
+      {% if page.project_time %}
+      <div class="meta-block">
+        <span class="meta-title">Timeline</span>
+        <span class="meta-detail">{{ page.project_time }}</span>
+      </div>
+      {% endif %}
+      
+      {% if page.project_tech %}
+      <div class="meta-block">
+        <span class="meta-title">Tech Stack</span>
+        <span class="meta-detail">{{ page.project_tech }}</span>
+      </div>
+      {% endif %}
+    </div>
+  </header>
+
+  <article class="portfolio-content-body">
+    
+    {{ content }}
+
+    <div class="action-buttons">
+      {% if page.github_link %}
+      <a href="{{ page.github_link }}" target="_blank" class="btn-minimal btn-black">
+        <svg style="width:18px; height:18px; fill:currentColor;" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.253-.447-1.27.098-2.646 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.376.202 2.394.1 2.646.64.699 1.026 1.591 1.026 2.682 0 3.841-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        GitHub Repository
+      </a>
+      {% endif %}
+      
+      {% if page.paper_link %}
+      <a href="{{ page.paper_link }}" target="_blank" class="btn-minimal btn-outline">
+        View Manuscript
+      </a>
+      {% endif %}
+    </div>
+
+  </article>
+</div>

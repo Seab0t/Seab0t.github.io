@@ -5,10 +5,95 @@ permalink: /
 author_profile: false
 ---
 
-{% include base_path %}
+<style>
+  /* 容器布局：采用 Flexbox 实现左图右文 */
+  .scientific-portfolio-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+    gap: 25px; /* 控制图片与文字的间距 */
+    border-bottom: 1px solid #eee; /* 可选：项目之间的分割线 */
+    padding-bottom: 1.5rem;
+  }
 
+  /* 左侧图片区域参数 */
+  .portfolio-image-wrapper {
+    flex: 0 0 35%; /* 图片固定占据 35% 的宽度 */
+    max-width: 300px;
+  }
 
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
+  .portfolio-image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 增加极轻微的阴影提升图表质感 */
+  }
 
+  /* 右侧文本区域参数 */
+  .portfolio-content-wrapper {
+    flex: 1; /* 文本自适应占据剩余空间 */
+  }
+
+  .portfolio-content-wrapper h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.4em;
+  }
+
+  .portfolio-content-wrapper h2 a {
+    text-decoration: none;
+    color: #2c3e50; /* 采用深灰蓝色，提升学术严谨感 */
+  }
+
+  .portfolio-content-wrapper h2 a:hover {
+    text-decoration: underline;
+  }
+
+  .portfolio-content-wrapper p {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* 响应式设计：在移动端自动切换为上下堆叠布局 */
+  @media (max-width: 768px) {
+    .scientific-portfolio-item {
+      flex-direction: column;
+    }
+    .portfolio-image-wrapper {
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+</style>
+
+<div class="portfolio-gallery">
+  {% for post in site.portfolio %}
+    <div class="scientific-portfolio-item">
+      
+      <!-- 左侧：项目缩略图 -->
+      <div class="portfolio-image-wrapper">
+        <a href="{{ base_path }}{{ post.url }}">
+          <!-- 默认调用 header.teaser 中定义的图片，如果没有则为空 -->
+          {% if post.header.teaser %}
+            <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }}">
+          {% else %}
+            <!-- 如果项目没有图片，显示一个灰色的占位图 -->
+            <img src="https://via.placeholder.com/500x300?text=No+Image" alt="Placeholder">
+          {% endif %}
+        </a>
+      </div>
+
+      <!-- 右侧：标题与描述 -->
+      <div class="portfolio-content-wrapper">
+        <h2>
+          <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+        </h2>
+        <!-- 提取 markdown 文件中的 excerpt (摘要) 并截断显示 -->
+        <p>{{ post.excerpt | markdownify | strip_html | truncate: 350 }}</p>
+      </div>
+
+    </div>
+  {% endfor %}
+</div>

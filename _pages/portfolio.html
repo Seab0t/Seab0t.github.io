@@ -77,7 +77,7 @@ author_profile: false
         <a href="{{ base_path }}{{ post.url }}">
           <!-- 默认调用 header.teaser 中定义的图片，如果没有则为空 -->
           {% if post.header.teaser %}
-            <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }}">
+            <img src="{{ site.baseurl }}{{ post.header.teaser }}" alt="{{ post.title }}">
           {% else %}
             <!-- 如果项目没有图片，显示一个灰色的占位图 -->
             <img src="https://via.placeholder.com/500x300?text=No+Image" alt="Placeholder">
@@ -91,7 +91,10 @@ author_profile: false
           <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
         </h2>
         <!-- 提取 markdown 文件中的 excerpt (摘要) 并截断显示 -->
-        <p>{{ post.excerpt | markdownify | strip_html | truncate: 350 }}</p>
+        <!-- 新代码：取消所有截断限制，并保留换行等格式 -->
+        <div class="portfolio-excerpt">
+          {{ post.excerpt | markdownify }}
+        </div>
       </div>
 
     </div>

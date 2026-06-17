@@ -76,8 +76,14 @@ author_profile: false
       <div class="portfolio-image-wrapper">
         <a href="{{ base_path }}{{ post.url }}">
           <!-- 默认调用 header.teaser 中定义的图片，如果没有则为空 -->
+<!-- 默认调用 header.teaser 中定义的图片，如果没有则为空 -->
           {% if post.header.teaser %}
-            <img src="{{ site.baseurl }}{{ post.header.teaser }}" alt="{{ post.title }}">
+            <!-- 判断路径是否包含 http，如果是外部链接则直接输出，否则使用 Jekyll 原生相对路径过滤器 -->
+            {% if post.header.teaser contains "://" %}
+              <img src="{{ post.header.teaser }}" alt="{{ post.title }}">
+            {% else %}
+              <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }}">
+            {% endif %}
           {% else %}
             <!-- 如果项目没有图片，显示一个灰色的占位图 -->
             <img src="https://via.placeholder.com/500x300?text=No+Image" alt="Placeholder">

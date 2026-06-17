@@ -4,7 +4,7 @@ collection: portfolio
 header:
   teaser: https://Seab0t.github.io/images/Congestion.png
 share: false
-author_profile: false
+author_profile: true
 gallery_description: How does congestion pricing reshape the travel choices of New Jersey-New York City commuters? We are employing segmented logit models to predict peak-hour mode shifts based on commuters' belief in the policy's effectiveness.
 ---
 

@@ -24,9 +24,16 @@ author_profile: true
 
   .portfolio-image-wrapper img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 增加极轻微的阴影提升图表质感 */
+    /* 设置一个固定的显示比例，这里推荐标准的 4:3 宽屏比例 */
+    aspect-ratio: 4 / 3; 
+    
+    /* 核心属性：确保图片填满整个画框，多出部分自动裁剪，绝不拉伸 */
+    object-fit: cover; 
+    
+    /* 可选：给图片加上非常微小的圆角，会让学术网页显得更现代、精致 */
+    border-radius: 4px; 
+    
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 
   /* 右侧文本区域参数 */

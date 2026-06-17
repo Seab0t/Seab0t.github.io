@@ -2,7 +2,7 @@
 title: "Evaluating Congestion Pricing Impacts on Commuter Behavior"
 collection: portfolio
 header:
-  teaser: /images/Congestion.png
+  teaser: https://www.w3schools.com/w3images/lights.jpg
 
 ---
 

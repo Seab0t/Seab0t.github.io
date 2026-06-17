@@ -1,25 +1,74 @@
-{% include base_path %}
+<style>
+  /* 覆盖原本导致拥挤的系统边距 */
+  .page__footer {
+    margin-top: 5rem !important; /* 将 Footer 与上方项目强行推开距离 */
+    padding: 0 !important;
+  }
 
-{% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
-<div class="page__footer-follow">
-  <ul class="social-icons">
-    {% if site.data.ui-text[site.locale].follow_label %}
-      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
-    {% endif %}
-    {% if site.author.github %}
-      <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
-    {% endif %}
-    {% if site.author.bitbucket %}
-      <li><a href="https://bitbucket.org/{{ site.author.bitbucket }}"><i class="fab fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
-    {% endif %}
-    <!-- {% if site.atom_feed.hide != true %}
-    <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
-    {% endif %} -->
-  </ul>
-</div>
-{% endif %}
+  /* 自定义极简 Footer 样式 */
+  .custom-minimal-footer {
+    padding: 2.5rem 20px;
+    background-color: #f8f9fa; /* 极其浅的灰色背景，非常高级 */
+    border-top: 1px solid #e9ecef; /* 顶部的浅色分割线 */
+    text-align: center;
+  }
 
-<div class="page__footer-copyright">
-  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}, {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
-  Site last updated {{ "now" | date: '%Y-%m-%d' }}, <a href="/sitemap/" style="text-transform: uppercase;">{{ site.data.ui-text[site.locale].site_map | default: "Sitemap" }}</a>
-</div>
+  .custom-minimal-footer-inner {
+    max-width: 950px; /* 和你的 Gallery 宽度保持一致 */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: #6c757d; /* 柔和的深灰色文字，不抢风头 */
+    font-size: 0.9rem;
+  }
+
+  .custom-minimal-footer p {
+    margin: 0;
+  }
+
+  .footer-contact-links {
+    display: flex;
+    gap: 25px; /* 两个按钮之间的间距 */
+    margin-top: 5px;
+  }
+
+  .footer-contact-links a {
+    color: #6c757d;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .footer-contact-links a:hover {
+    color: #2c3e50; /* 鼠标悬浮时颜色加深，增加交互感 */
+  }
+
+  .footer-contact-links i {
+    margin-right: 6px; /* 图标和文字之间的间距 */
+  }
+</style>
+
+<footer class="custom-minimal-footer">
+  <div class="custom-minimal-footer-inner">
+    
+    <!-- 版权信息（根据你的截图已修改名字，可自行调整） -->
+    <p>&copy; 2026 Weilai X. All rights reserved.</p>
+    
+    <!-- 极简社交链接 -->
+    <div class="footer-contact-links">
+      
+      <!-- 替换为你的真实邮箱 -->
+      <a href="mailto:your_email@nyu.edu" aria-label="Email">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      
+      <!-- 你的 GitHub 链接 -->
+      <a href="https://github.com/Seab0t" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      
+    </div>
+  </div>
+</footer>

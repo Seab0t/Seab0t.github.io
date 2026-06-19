@@ -6,10 +6,15 @@ header:
   teaser: https://Seab0t.github.io/images/Congestion.png
 share: false
 author_profile: false
-gallery_description: How does congestion pricing reshape the travel choices of New Jersey-New York City commuters? We are employing segmented logit models to predict peak-hour mode shifts based on commuters' belief in the policy's effectiveness.
+gallery_description: How do congestion pricing and perceived policy effectiveness reshape the travel behavior of New Jersey–New York City commuters? 
 ---
 
 <br>
+
+New York City was scheduled to introduce a congestion fee for vehicles entering the central business district to alleviate traffic congestion starting in June 2024. As New Jersey residents represent a major portion of affected cross-state commuters, understanding their behavioral shifts is essential.
+
+This project explores the impact of congestion pricing on commuter
+travel choices from New Jersey to New York City during peak weekday hours using a stated preference survey and segmented mixed logit model. 
 
 ### 📌 Research Objective
 The implementation of the Central Business District Tolling Program aims to alleviate severe traffic in Manhattan. This project evaluates how interstate commuters from New Jersey react to various tolling schemes, specifically isolating the impact of subjective policy attitudes on transportation mode choice.

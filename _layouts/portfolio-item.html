@@ -2,122 +2,125 @@
 layout: default
 ---
 <style>
-  /* 1. 整体布局：去掉了字体强制覆盖，完美继承你导航页的默认字体 */
+  /* ====== 之前的全局极简代码保持完全不变 ====== */
   .portfolio-page-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, Arial, sans-serif;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 25px;
     color: #1a1a1a;
   }
-
-  /* 2. 悬浮标题栏 */
   .sticky-project-header {
-    position: sticky;
-    top: 0;
-    background-color: #ffffff;
-    z-index: 100;
-    padding: 30px 0 20px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
+    position: sticky; top: 0; background-color: #ffffff; z-index: 100;
+    padding: 30px 0 20px 0; border-bottom: 1px solid rgba(0,0,0,0.08);
   }
-
-  /* 💎 新增：极简返回按钮 */
   .back-to-gallery {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #888;
-    text-decoration: none !important; /* 强制去掉下划线 */
-    margin-bottom: 20px;
-    transition: all 0.2s ease;
+    display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem;
+    text-transform: uppercase; letter-spacing: 0.05em; color: #888;
+    text-decoration: none !important; margin-bottom: 20px; transition: all 0.2s ease;
   }
-  
-  /* 悬浮时颜色加深，并向左微微移动，提供极其高级的交互感 */
-  .back-to-gallery:hover {
-    color: #000;
-    transform: translateX(-4px); 
-  }
-
-  /* 标题字号调小，更精致 */
+  .back-to-gallery:hover { color: #000; transform: translateX(-4px); }
   .sticky-project-header h1 {
-    font-size: 2rem; /* 从 2.3 调小到 2.0 */
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-    margin: 0 0 25px 0;
-    color: #000;
+    font-size: 2rem; font-weight: 500; line-height: 1.2; letter-spacing: -0.02em;
+    margin: 0 0 25px 0; color: #000;
   }
-
-  /* 3. 信息看板 */
-  .typography-meta-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px; 
-  }
-
-  .meta-block {
-    display: flex;
-    flex-direction: column;
-  }
-
+  .typography-meta-info { display: flex; flex-wrap: wrap; gap: 40px; }
+  .meta-block { display: flex; flex-direction: column; }
   .meta-title {
-    font-size: 0.6rem;
-    text-transform: uppercase; 
-    letter-spacing: 0.1em;
-    color: #888;
-    margin-bottom: 6px;
+    font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em;
+    color: #888; margin-bottom: 6px;
   }
-
-  .meta-detail {
-    font-size: 0.95rem; /* 稍微调小 */
-    font-weight: 500;
-    color: #000;
-  }
-
-  /* 4. 正文排版：字号恢复到正常学术阅读大小 */
-  .portfolio-content-body {
-    margin-top: 40px;
-    font-size: 1.05rem; /* 从 1.15 调回 1.05，视觉更舒服 */
-    line-height: 1.7;
-  }
-
-  /* 二级标题字号调小 */
+  .meta-detail { font-size: 0.95rem; font-weight: 500; color: #000; }
+  .portfolio-content-body { margin-top: 40px; font-size: 1.05rem; line-height: 1.7; }
   .portfolio-content-body h3 {
-    font-size: 1.3rem; /* 从 1.5 调小到 1.3 */
-    font-weight: 700;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    color: #000;
+    font-size: 1.3rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1rem; color: #000;
   }
-
   .portfolio-content-body img {
-    margin: 2rem 0;
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
+    margin: 2rem 0; width: 100%; height: auto; border-radius: 4px;
   }
-
-  /* 5. 极简黑白操作按钮 */
-  .action-buttons {
-    display: flex; gap: 15px; margin-top: 4rem; margin-bottom: 4rem;
-  }
+  .action-buttons { display: flex; gap: 15px; margin-top: 4rem; margin-bottom: 4rem; }
   .btn-minimal {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 0.7rem 1.4rem; border-radius: 4px; font-weight: 500; font-size: 0.9rem;
-    text-decoration: none !important; transition: all 0.2s;
+    display: inline-flex; align-items: center; gap: 8px; padding: 0.7rem 1.4rem;
+    border-radius: 4px; font-weight: 500; font-size: 0.9rem; text-decoration: none !important;
+    transition: all 0.2s;
   }
   .btn-black { background-color: #000; color: #fff !important; }
   .btn-black:hover { background-color: #333; }
   .btn-outline { background-color: #fff; color: #000 !important; border: 1px solid #ccc; }
   .btn-outline:hover { border-color: #000; }
+
+  /* ====== 🚀 新增：左图右文子项目列表专属 CSS ====== */
+  .subproject-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* 每个子项目之间的垂直间距 */
+    margin-top: 2rem;
+  }
+
+  .subproject-row {
+    display: flex;
+    gap: 30px; /* 图片和右侧文字之间的水平间距 */
+    align-items: flex-start; /* 顶部对齐 */
+  }
+
+  /* 左侧图片容器：固定宽度比例 */
+  .subproject-img-wrapper {
+    flex: 0 0 35%; /* 左边占 35% 宽度 */
+    max-width: 320px;
+  }
+
+  /* 覆盖原本 img 的 margin，并加上极其细微的边框和阴影，模仿截图里的高级感 */
+  .subproject-img-wrapper img {
+    margin: 0 !important; 
+    border: 1px solid #eaeaea; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  /* 右侧文字容器：自动填满剩余空间 */
+  .subproject-text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subproject-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #1a4471; /* 模仿你截图里的深邃学术蓝，如果想要纯黑可以改成 #000 */
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+  }
+
+  .subproject-meta {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 12px;
+    font-style: italic; /* 适合放作者、期刊名 */
+  }
+
+  .subproject-desc {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* 手机端适配：屏幕变小时自动变成上下堆叠 */
+  @media (max-width: 768px) {
+    .subproject-row {
+      flex-direction: column;
+      gap: 15px;
+    }
+    .subproject-img-wrapper {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
 </style>
 
 <div class="portfolio-page-container">
-  
   <header class="sticky-project-header">
-    <a href="{{ site.baseurl }}" class="back-to-gallery">
+    <a href="{{ site.baseurl }}/" class="back-to-gallery">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M19 12H5M12 19l-7-7 7-7"/>
       </svg>

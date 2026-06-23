@@ -8,8 +8,6 @@ share: false
 author_profile: false
 gallery_description: How do congestion pricing and perceived policy effectiveness reshape the travel behavior of New Jersey–New York City commuters? 
 ---
-<br>
-
 New York City was scheduled to introduce a congestion fee for vehicles entering the central business district to alleviate traffic congestion starting in June 2024. As New Jersey residents represent a major portion of affected cross-state commuters, understanding their behavioral shifts is essential.
 
 This project explores the impact of congestion pricing on commuter

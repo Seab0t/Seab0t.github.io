@@ -17,6 +17,24 @@ We develop decision-making frameworks and optimization algorithms to implement c
 
 <div class="subproject-list">
 
+<div class="subproject-row">
+    <div class="subproject-img-wrapper">
+      <a href="https://Seab0t.github.io/images/FacadeLLM Flowchart.png" target="_blank" title="Click to view full image">
+        <img src="https://Seab0t.github.io/images/FacadeLLM Flowchart.png" alt="LLM extraction pipeline">
+      </a>
+    </div>
+    
+    <div class="subproject-text-content">
+      <h4 class="subproject-title">
+        <a href="https://ascelibrary.org/doi/abs/10.1061/9780784486436.059" target="_blank">
+          Leveraging Large Language Models (LLM) and Machine Learning for Extracting Conditions that Impact Safety Rating of Building Façades
+        </a>
+      </h4>
+      <div class="subproject-meta">B Kiper, W Xu, N Dey, S Ergan. Computing in Civil Engineering 2025: Computational and Intelligent Technologies (2025).</div>
+      <p class="subproject-desc">This research helps to uncover the reasoning behind urban façade safety ratings by utilizing LLM and ML methods.</p>
+    </div>
+  </div>
+
   <div class="subproject-row">
     <div class="subproject-img-wrapper">
       <img src="https://Seab0t.github.io/images/FacadeLLM Flowchart.png" alt="Optimal protective measures chart">
@@ -26,6 +44,15 @@ We develop decision-making frameworks and optimization algorithms to implement c
       <h4 class="subproject-title">Leveraging Large Language Models (LLM) and Machine Learning for Extracting Conditions that Impact Safety Rating of Building Façades</h4>
       <div class="subproject-meta">B Kiper, W Xu, N Dey, S Ergan. Computing in Civil Engineering 2025: Computational and Intelligent Technologies (2025).</div>
       <p class="subproject-desc">This research helps to uncover the reasoning behind urban façade safety ratings by utilizing LLM and ML methods.</p>
+    </div>
+    <div class="subproject-list">
+
+  <div class="subproject-row">
+    
+    <div class="subproject-img-wrapper">
+      <a href="你的图片链接.png" target="_blank" title="Click to view full image">
+        <img src="你的图片链接.png" alt="LLM extraction pipeline">
+      </a>
     </div>
   </div>
 

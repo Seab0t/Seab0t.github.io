@@ -2,7 +2,7 @@
 layout: default
 ---
 <style>
-  /* ====== 之前的全局极简代码保持完全不变 ====== */
+  /* ====== 全局极简代码 ====== */
   .portfolio-page-container {
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, Arial, sans-serif;
     max-width: 1000px;
@@ -15,7 +15,7 @@ layout: default
     padding: 30px 0 20px 0; border-bottom: 1px solid rgba(0,0,0,0.08);
   }
   .back-to-gallery {
-    display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem;
+    display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem;
     text-transform: uppercase; letter-spacing: 0.05em; color: #888;
     text-decoration: none !important; margin-bottom: 20px; transition: all 0.2s ease;
   }
@@ -26,11 +26,15 @@ layout: default
   }
   .typography-meta-info { display: flex; flex-wrap: wrap; gap: 40px; }
   .meta-block { display: flex; flex-direction: column; }
+  
+  /* 统一：看板小标题稍微放大 */
   .meta-title {
-    font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em;
+    font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;
     color: #888; margin-bottom: 6px;
   }
-  .meta-detail { font-size: 0.95rem; font-weight: 500; color: #000; }
+  /* 统一：看板内容字号对齐正文 */
+  .meta-detail { font-size: 1.05rem; font-weight: 500; color: #000; }
+  
   .portfolio-content-body { margin-top: 40px; font-size: 1.05rem; line-height: 1.7; }
   .portfolio-content-body h3 {
     font-size: 1.3rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1rem; color: #000;
@@ -39,9 +43,11 @@ layout: default
     margin: 2rem 0; width: 100%; height: auto; border-radius: 4px;
   }
   .action-buttons { display: flex; gap: 15px; margin-top: 4rem; margin-bottom: 4rem; }
+  
+  /* 统一：底部按钮字号对齐正文 */
   .btn-minimal {
     display: inline-flex; align-items: center; gap: 8px; padding: 0.7rem 1.4rem;
-    border-radius: 4px; font-weight: 500; font-size: 0.9rem; text-decoration: none !important;
+    border-radius: 4px; font-weight: 500; font-size: 1.05rem; text-decoration: none !important;
     transition: all 0.2s;
   }
   .btn-black { background-color: #000; color: #fff !important; }
@@ -49,7 +55,7 @@ layout: default
   .btn-outline { background-color: #fff; color: #000 !important; border: 1px solid #ccc; }
   .btn-outline:hover { border-color: #000; }
 
-/* ====== 🚀 新增：左图右文子项目列表专属 CSS ====== */
+  /* ====== 左图右文子项目列表专属 CSS ====== */
   .subproject-list {
     display: flex;
     flex-direction: column;
@@ -64,14 +70,13 @@ layout: default
   }
 
   .subproject-img-wrapper {
-    flex: 0 0 32%; /* 稍微缩小了图片的占比，给文字留更多空间 */
+    flex: 0 0 32%;
     max-width: 300px;
   }
 
-  /* 图片悬浮放大特效：暗示可以点击 */
   .subproject-img-wrapper a {
     display: block;
-    overflow: hidden; /* 防止图片放大时溢出边框 */
+    overflow: hidden; 
     border-radius: 4px;
     border: 1px solid #eaeaea; 
     box-shadow: 0 2px 6px rgba(0,0,0,0.04);
@@ -81,50 +86,52 @@ layout: default
     width: 100%;
     display: block;
     border: none;
-    transition: transform 0.3s ease; /* 添加平滑动画 */
+    transition: transform 0.3s ease; 
   }
   .subproject-img-wrapper a:hover img {
-    transform: scale(1.03); /* 鼠标放上去时，图片微微放大 3% */
+    transform: scale(1.03); 
   }
 
   .subproject-text-content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin-top: -3px; /* 微调：消除标题自带的细微顶部空白，让文字和图片上边缘绝对齐平 */
+    margin-top: -3px; 
   }
 
+  /* 统一：如果正文是 1.05，标题必须放大压得住场子 */
   .subproject-title {
-    font-size: 1.05rem; /* 字号缩小 */
+    font-size: 1.2rem; 
     font-weight: 600;
     margin: 0 0 6px 0;
     line-height: 1.4;
   }
 
-  /* 标题链接的样式 */
   .subproject-title a {
     color: #1a4471; 
     text-decoration: none !important;
     transition: color 0.2s ease;
   }
   .subproject-title a:hover {
-    color: #e74c3c; /* 鼠标悬停时变成显眼的颜色（可根据喜好改回黑色 #000） */
+    color: #e74c3c; 
     text-decoration: underline !important;
   }
 
+  /* 统一：作者信息稍微小一点点形成对比 */
   .subproject-meta {
-    font-size: 0.85rem; /* 作者和年份字号进一步缩小 */
+    font-size: 0.95rem; 
     color: #666;
     margin-bottom: 10px;
     font-style: italic; 
   }
 
+  /* 统一：描述文字完全对齐 1.05rem 正文 */
   .subproject-desc {
-    font-size: 0.95rem; /* 描述字号缩小 */
+    font-size: 1.05rem; 
     color: #333;
     line-height: 1.6;
     margin: 0;
-    text-align: justify; /* 💡 关键：强制两端对齐，消除右侧锯齿感 */
+    text-align: justify; 
   }
 
   @media (max-width: 768px) {

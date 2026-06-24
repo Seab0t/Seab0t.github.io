@@ -53,3 +53,14 @@ New York City faces highly unequal heat risks across its neighborhoods. While gr
 </div>
 
 ### Beyond The Project
+Throughout this project, several intriguing questions emerged and sparked my interest for future research.
+
+#### LST Downscaling
+For this project, a simple statistical model was sufficient because our primary goal was comparing relative heat across different neighborhoods within a single city. We didn't strictly need highly precise, long-term time-series LST. However, for broader ecological monitoring or comprehensive urban thermal analysis, achieving high spatiotemporal resolution is critical.
+
+Issues such as multi-sensor data fusion, cloud interference, model sensitivity to spatial scaling, chose of auxiliary datasets and physical constraints in deep learning, all remain challenges for exploration.
+
+#### Visual Thermal Perception & Human Behavior
+- Beyond the absolute air temperature, how do perceived greenery, shadows, and even crowd density shape our cognitive thermal comfort?
+
+- Under varying environmental conditions, such as a sudden heatwave or canopy expansion, how do pedestrian traffic flows and routing decisions dynamically adapt?

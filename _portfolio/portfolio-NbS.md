@@ -10,7 +10,7 @@ project_role: "Lead Student Researcher"
 github_link: "https://github.com/Seab0t/NbS_tool"
 gallery_description: How can we optimize urban canopy expansion to mitigate thermal stress in NYC neighborhoods facing the highest heat risk?
 ---
-<div style="border-left: 3px solid #e2e8f0; padding-left: 15px; margin-bottom: 30px; color: #64748b; font-size: 1.05rem; line-height: 1.6;">
+<div style="border-left: 3px solid #e2e8f0; padding-left: 15px; margin-bottom: 30px; color: #64748b; font-size: 0.9rem; line-height: 1.6;">
   <strong>Project Sponsors:</strong><br>
   Prof. Constantinos Cartalis, Dr. Ilias Agathangelidis, and Dr. Kostas Philippopoulos <br>
   <em>National and Kapodistrian University of Athens (Greece)</em>

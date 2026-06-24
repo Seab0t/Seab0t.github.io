@@ -1,5 +1,5 @@
 ---
-title: "Addressing Data Scarcity and Class Imbalance in Automated Façade Defects Inspection"
+title: "A Computer Vision based approach to detect defects on urban building façades"
 collection: portfolio
 layout: portfolio-item
 header:
@@ -7,7 +7,7 @@ header:
 share: false
 author_profile: false
 project_role: "Research Assistant"
-gallery_description: The critical challenge in automated façade inspection is the shortage of labeled images and the irregular occurrence of various defect types, which inherently skews datasets and limits model performance. We are building a multimodal data engine to obtain an extensive empirical dataset from historical archives and generate synthetic data for under-represented defect categories.
+gallery_description: The critical challenge in automated façade inspection is the shortage of labeled images and the irregular occurrence of various defect types, which inherently skews datasets and limits model performance. We are building a multimodal data engine to obtain an extensive empirical dataset from façade inspection reports and generate synthetic data for under-represented defect categories.
 ---
 <div style="border-left: 3px solid #e2e8f0; padding-left: 15px; margin-bottom: 30px; color: #64748b; font-size: 0.9rem; line-height: 1.6;">
   <strong>Research Affiliation:</strong> Developed as part of the 
@@ -17,12 +17,13 @@ gallery_description: The critical challenge in automated façade inspection is t
   <strong>Collaboration:</strong> Conducted under the guidance of Beyza Kiper, Ph.D. Candidate at BiLAB
 </div>
 
-We develop decision-making frameworks and optimization algorithms to implement cost-effective and equitable measures against natural hazards.
+The critical challenge in automated façade inspection is the shortage of labeled images and the irregular occurrence of various defect types, which inherently skews datasets and limits model performance. We are building a multimodal data engine to obtain an extensive empirical dataset from façade inspection reports and generate synthetic data for under-represented defect categories.
 
-### Sub-Projects & Publication
+Addressing Data Scarcity and Class Imbalance in Automated Façade Defects Inspection
+
+### Conference
 
 <div class="subproject-list">
-
 <div class="subproject-row">
     <div class="subproject-img-wrapper">
       <a href="https://Seab0t.github.io/images/FacadeLLM Flowchart.png" target="_blank" title="Click to view full image">
@@ -41,7 +42,7 @@ We develop decision-making frameworks and optimization algorithms to implement c
     </div>
   </div>
 
-  <div class="subproject-row">
+<div class="subproject-row">
     <div class="subproject-img-wrapper">
       <a href="https://Seab0t.github.io/images/FacadeLLM Flowchart.png" target="_blank" title="Click to view full image">
         <img src="https://Seab0t.github.io/images/FacadeLLM Flowchart.png" alt="LLM extraction pipeline">
@@ -56,15 +57,6 @@ We develop decision-making frameworks and optimization algorithms to implement c
       </h4>
       <div class="subproject-meta">B Kiper, W Xu, N Dey, S Ergan. Computing in Civil Engineering 2025: Computational and Intelligent Technologies (2025).</div>
       <p class="subproject-desc">This research helps to uncover the reasoning behind urban façade safety ratings by utilizing LLM and ML methods.</p>
-    </div>
-    <div class="subproject-list">
-
-  <div class="subproject-row">
-    
-    <div class="subproject-img-wrapper">
-      <a href="你的图片链接.png" target="_blank" title="Click to view full image">
-        <img src="你的图片链接.png" alt="LLM extraction pipeline">
-      </a>
     </div>
   </div>
 

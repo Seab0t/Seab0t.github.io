@@ -20,7 +20,7 @@ New York City faces highly unequal heat risks across its neighborhoods. While gr
 
 ### Methodology
 <div style="border-left: 3px solid #1a1a1a; padding-left: 20px; margin-bottom: 35px;">
-  <h4 style="margin: 0 0 6px 0; font-size: 1.15rem; font-weight: 600; color: #000;">1: Heat Risk Identification</h4>
+  <h4 style="margin: 0 0 6px 0; font-size: 1.15rem; font-weight: 600; color: #000;">1. Heat Risk Identification</h4>
   <p style="margin: 0 0 10px 0; font-size: 1.05rem; color: #555; line-height: 1.5;">
     Calculated neighborhood-level heat risk across NYC by integrating downscaled land surface temperature, land cover and socioeconomic indicators.
   </p>
@@ -35,7 +35,7 @@ New York City faces highly unequal heat risks across its neighborhoods. While gr
 </div>
 
 <div style="border-left: 3px solid #1a1a1a; padding-left: 20px; margin-bottom: 30px;">
-  <h4 style="margin: 0 0 6px 0; font-size: 1.15rem; font-weight: 600; color: #000;">2: Microclimate Simulation</h4>
+  <h4 style="margin: 0 0 6px 0; font-size: 1.15rem; font-weight: 600; color: #000;">2. Microclimate Simulation</h4>
   <p style="margin: 0 0 10px 0; font-size: 1.05rem; color: #555; line-height: 1.5;">
     Conducted cooling simulations for the top 5 high-risk NYC neighborhoods.
   </p>

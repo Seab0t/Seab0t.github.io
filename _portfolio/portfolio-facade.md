@@ -34,14 +34,18 @@ Addressing Data Scarcity and Class Imbalance in Automated Façade Defects Inspec
       <h4 class="subproject-title">
         A Large-Scale Dataset of Multi-Class Building Façade Defects
       </h4>
-      <p class="subproject-desc">I developed a multimodal pipeline to scrape and process over 30,000 historical New York City façade inspection reports. By integrating natural language processing and vision-language models, this framework cleanses chaotic archival PDFs to construct a high-quality, aligned image-caption dataset.</p>
-    </div>
-    <div style="margin-top: 14px;">
-        <a href="https://github.com/Seab0t/DOB-FISP-Reports" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem; font-weight: 500; color: #1a1a1a; text-decoration: none; border: 1px solid #ccc; padding: 4px 12px; border-radius: 4px; transition: all 0.2s;" onmouseover="this.style.borderColor='#000'; this.style.backgroundColor='#f9f9f9'" onmouseout="this.style.borderColor='#ccc'; this.style.backgroundColor='transparent'">
-          <svg style="width:14px; height:14px; fill:currentColor;" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.253-.447-1.27.098-2.646 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.376.202 2.394.1 2.646.64.699 1.026 1.591 1.026 2.682 0 3.841-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+      
+      <p class="subproject-desc">
+        I developed a multimodal pipeline to scrape and process over 30,000 historical New York City façade inspection reports. By integrating natural language processing and vision-language models, this framework cleanses chaotic archival PDFs to construct a high-quality, aligned image-caption dataset.
+      </p>
+      
+      <div style="margin-top: 18px;">
+        <a href="https://github.com/Seab0t/DOB-FISP-Reports" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.95rem; font-weight: 500; color: #1a1a1a; text-decoration: none; border: 1px solid #ccc; padding: 6px 14px; border-radius: 4px; transition: all 0.2s;" onmouseover="this.style.borderColor='#000'; this.style.backgroundColor='#f9f9f9'" onmouseout="this.style.borderColor='#ccc'; this.style.backgroundColor='transparent'">
+          <svg style="width:16px; height:16px; fill:currentColor;" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.253-.447-1.27.098-2.646 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.376.202 2.394.1 2.646.64.699 1.026 1.591 1.026 2.682 0 3.841-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
           Scrapy Spider Code
         </a>
       </div>
+    </div>
   </div>
 
 <div class="subproject-row">

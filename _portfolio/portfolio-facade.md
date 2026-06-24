@@ -21,23 +21,19 @@ The critical challenge in automated façade inspection is the shortage of labele
 
 Addressing Data Scarcity and Class Imbalance in Automated Façade Defects Inspection
 
-### Conference
 
 <div class="subproject-list">
 <div class="subproject-row">
     <div class="subproject-img-wrapper">
-      <a href="https://Seab0t.github.io/images/FacadeLLM Flowchart.png" target="_blank" title="Click to view full image">
-        <img src="https://Seab0t.github.io/images/FacadeLLM Flowchart.png" alt="LLM extraction pipeline">
+      <a href="https://Seab0t.github.io/images/FISP_Flow.png" target="_blank" title="Click to view full image">
+        <img src="https://Seab0t.github.io/images/FISP_Flow.png" alt="Data Process Pipeline">
       </a>
     </div>
     
     <div class="subproject-text-content">
       <h4 class="subproject-title">
-        <a href="https://ascelibrary.org/doi/abs/10.1061/9780784486436.059" target="_blank">
-          Leveraging Large Language Models (LLM) and Machine Learning for Extracting Conditions that Impact Safety Rating of Building Façades
-        </a>
+        An Image Dataset of Multi-Class Building Façade Defects
       </h4>
-      <div class="subproject-meta">B Kiper, W Xu, N Dey, S Ergan. Computing in Civil Engineering 2025: Computational and Intelligent Technologies (2025).</div>
       <p class="subproject-desc">This research helps to uncover the reasoning behind urban façade safety ratings by utilizing LLM and ML methods.</p>
     </div>
   </div>

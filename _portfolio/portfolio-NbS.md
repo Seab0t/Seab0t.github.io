@@ -15,7 +15,7 @@ New York City faces highly unequal heat risks across its neighborhoods. While gr
 ## Research Poster
 <div style="text-align: center; margin: 3rem 0;">
   <a href="https://github.com/Seab0t/NbS_tool/blob/main/Poster_NbS_tool.pdf" target="_blank" title="Click to view full PDF poster">
-    <img src="https://github.com/Seab0t/NbS_tool/blob/main/Poster_NbS_tool.pdf" alt="Project Poster" style="border: 1px solid #eaeaea; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border-radius: 8px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+    <img src="https://Seab0t.github.io/images/NbS_Thumb.png" alt="Project Poster" style="border: 1px solid #eaeaea; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border-radius: 8px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
   </a>
   <p style="font-size: 0.85rem; color: #888; margin-top: 15px; font-style: italic; letter-spacing: 0.02em;">Click to view the high-res poster in a new tab.</p>
 </div>
@@ -39,7 +39,7 @@ New York City faces highly unequal heat risks across its neighborhoods. While gr
 </div>
 
 <div style="border-left: 3px solid #1a1a1a; padding-left: 20px; margin-bottom: 30px;">
-  <h4 style="margin: 0 0 6px 0; font-size: 1.15rem; font-weight: 600; color: #000;">Phase 2: Microclimate Simulation (TARGET Model)</h4>
+  <h4 style="margin: 0 0 6px 0; font-size: 1.15rem; font-weight: 600; color: #000;">Phase 2: Microclimate Simulation</h4>
   <p style="margin: 0 0 10px 0; font-size: 0.95rem; color: #555; line-height: 1.5;">
     Conducted high-resolution cooling simulations for the top 5 high-risk NYC neighborhoods.
   </p>

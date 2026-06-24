@@ -14,10 +14,10 @@ New York City faces highly unequal heat risks across its neighborhoods. While gr
 
 ## Research Poster
 <div style="text-align: center; margin: 3rem 0;">
-  <a href="https://github.com/Seab0t/NbS_tool/blob/main/Poster_NbS_tool.pdf" target="_blank" title="Click to view full PDF poster">
+  <a href="https://Seab0t.github.io/files/Poster_NbS.pdf" target="_blank" title="Click to view full PDF poster">
     <img src="https://Seab0t.github.io/images/NbS_Thumb.png" alt="Project Poster" style="border: 1px solid #eaeaea; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border-radius: 8px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
   </a>
-  <p style="font-size: 0.85rem; color: #888; margin-top: 15px; font-style: italic; letter-spacing: 0.02em;">Click to view the high-res poster in a new tab.</p>
+  <p style="font-size: 0.85rem; color: #888; margin-top: 15px; font-style: italic; letter-spacing: 0.02em;">Click to view the poster in a new tab.</p>
 </div>
 
 ### Methodology

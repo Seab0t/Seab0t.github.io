@@ -2,6 +2,7 @@
 title: "A Decision Support Tool for Enhancing Resilience to Urban Overheating with Nature-Based Solutions"
 collection: portfolio
 layout: portfolio-item
+order: 2
 header:
   teaser: https://Seab0t.github.io/images/NbS.png
 share: false
@@ -16,6 +17,11 @@ gallery_description: How can we optimize urban canopy expansion to mitigate ther
   <em>National and Kapodistrian University of Athens (Greece)</em>
 </div>
 
+<div style="text-align: center; margin-top: 1rem; margin-bottom: 3rem;">
+  <a href="https://Seab0t.github.io/files/Poster_NbS.pdf" target="_blank" title="Click to view full PDF poster">
+    <img src="https://Seab0t.github.io/images/NbS_Thumb.png" alt="Project Poster" style="border: 1px solid #eaeaea; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border-radius: 8px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+  </a>
+</div>
 New York City faces highly unequal heat risks across its neighborhoods. While green infrastructure is a proven cooling strategy, optimizing its deployment for spatial equity and long-term effectiveness under future climate scenarios remains a critical challenge. This project integrates downscaled satellite imagery and microclimate simulations to assess neighborhood-level heat risk and quantify the cooling efficacy of different urban canopy expansion schemes.
 
 ### Methodology
@@ -43,13 +49,6 @@ New York City faces highly unequal heat risks across its neighborhoods. While gr
     <li><b>Climate Scenarios:</b> Compared baseline (2017-2020) against future high-emission projections (SSP5-RCP8.5, 2020-2039).</li>
     <li><b>NbS Intervention:</b> Modeled a 20% urban tree canopy expansion.</li>
   </ul>
-</div>
-
-### Research Poster
-<div style="text-align: center; margin-top: 1rem; margin-bottom: 3rem;">
-  <a href="https://Seab0t.github.io/files/Poster_NbS.pdf" target="_blank" title="Click to view full PDF poster">
-    <img src="https://Seab0t.github.io/images/NbS_Thumb.png" alt="Project Poster" style="border: 1px solid #eaeaea; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border-radius: 8px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-  </a>
 </div>
 
 ### Beyond The Project

@@ -19,9 +19,6 @@ gallery_description: The critical challenge in automated façade inspection is t
 
 A critical challenge in automated façade inspection is the shortage of labeled images and the irregular occurrence of various defect types, which inherently skews datasets and limits model performance. We are building a multimodal data engine to obtain an extensive empirical dataset from façade inspection reports and generate synthetic data for under-represented defect categories.
 
-Addressing Data Scarcity and Class Imbalance in Automated Façade Defects Inspection non-destructive visual inspection
-
-
 <div class="subproject-list">
 <div class="subproject-row">
     <div class="subproject-img-wrapper">
@@ -80,9 +77,5 @@ Addressing Data Scarcity and Class Imbalance in Automated Façade Defects Inspec
       <p class="subproject-desc">This research helps to uncover the reasoning behind urban façade safety ratings by utilizing LLM and ML methods.</p>
     </div>
   </div>
-
-
 </div>
-
-### Beyond This Project
 

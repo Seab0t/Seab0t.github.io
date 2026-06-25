@@ -36,7 +36,7 @@ Addressing Data Scarcity and Class Imbalance in Automated Façade Defects Inspec
       </h4>
       
       <p class="subproject-desc">
-        I developed a multimodal pipeline to scrape and process over 30,000 historical New York City façade inspection reports. By integrating natural language processing and vision-language models, this framework cleanses chaotic archival PDFs to construct a high-quality, aligned image-caption dataset.
+        Built upon over 30,000 scraped NYC inspection reports, this pipeline leverages NLP and vision-language models to transform unstructured PDFs into an aligned image-caption dataset.
       </p>
       
       <div style="margin-top: 18px;">
@@ -57,9 +57,9 @@ Addressing Data Scarcity and Class Imbalance in Automated Façade Defects Inspec
     
     <div class="subproject-text-content">
       <h4 class="subproject-title">
-          Text-Guided Diffusion for Synthesizing Rare Building Façade Defect
+          Text-Guided Diffusion Model for Synthesizing Rare Building Façade Defect
       </h4>
-      <p class="subproject-desc"></p>
+      <p class="subproject-desc">To address the scarcity of rare facade defect classes, this project employs DiffusionCLIP to perform targeted semantic manipulations on defect images, synthesizing diverse augmented data to enhance the robustness of deep learning detection models.</p>
     </div>
   </div>
 

@@ -50,6 +50,21 @@ Addressing Data Scarcity and Class Imbalance in Automated Façade Defects Inspec
 
 <div class="subproject-row">
     <div class="subproject-img-wrapper">
+      <a href="https://Seab0t.github.io/images/generated.png" target="_blank" title="Click to view full image">
+        <img src="https://Seab0t.github.io/images/generated.png" alt="Generated Efflorescence">
+      </a>
+    </div>
+    
+    <div class="subproject-text-content">
+      <h4 class="subproject-title">
+          Text-Guided Diffusion for Synthesizing Rare Building Façade Defect
+      </h4>
+      <p class="subproject-desc"></p>
+    </div>
+  </div>
+
+<div class="subproject-row">
+    <div class="subproject-img-wrapper">
       <a href="https://Seab0t.github.io/images/FacadeLLM Flowchart.png" target="_blank" title="Click to view full image">
         <img src="https://Seab0t.github.io/images/FacadeLLM Flowchart.png" alt="LLM extraction pipeline">
       </a>

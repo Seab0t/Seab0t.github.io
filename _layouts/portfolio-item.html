@@ -55,7 +55,7 @@ layout: default
   }
   
   /* 核心：将原本突兀的粗体削减为 500 字重，颜色微调为比周围略深的深灰 */
-  .meta-left-role .role-highlight {
+  .meta-left-role .role-value {
     font-weight: 500; 
     color: #1a4471;
     margin-left: 2px;
@@ -203,7 +203,7 @@ layout: default
 <div class="typography-meta-info">
       <div class="meta-left-role">
         {% if page.project_role %}
-          Role  {{ page.project_role }}
+          Role: {{ page.project_role }}
         {% endif %}
       </div>
       

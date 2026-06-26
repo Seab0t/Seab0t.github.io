@@ -44,12 +44,20 @@ layout: default
     align-items: center;
     width: 100%;
   }
-  .meta-block { display: flex; flex-direction: column; }
-  .meta-title {
-    font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;
-    color: #64748b; margin-bottom: 6px;
+
+  /* 🎯 严格修改：左侧 Role 块全面对齐您的参数 */
+  .meta-left-role {
+    font-size: 1.05rem;
+    font-weight: 400; /* 极致轻盈的正文质感 */
+    color: #64748b;    /* 核心：颜色全部改用您致谢块的 #64748b，消灭突兀的纯黑 */
   }
-  .meta-detail { font-size: 1.05rem; font-weight: 500; color: #252525; } 
+  
+  /* 核心：将原本突兀的粗体削减为 500 字重，颜色微调为比周围略深的深灰 */
+  .meta-left-role .role-highlight {
+    font-weight: 500; 
+    color: #4d4d4d;
+    margin-left: 2px;
+  }
 
   /* 右侧：超链接容器 */
   .meta-right-links {
@@ -191,12 +199,10 @@ layout: default
     <h1>{{ page.title }}</h1>
     
 <div class="typography-meta-info">
-      {% if page.project_role %}
-      <div class="meta-block">
-        <span class="meta-title">Role</span>
-        <span class="meta-detail">{{ page.project_role }}</span>
-      </div>
-      {% endif %}
+      <div class="meta-left-role">
+        {% if page.project_role %}
+          Role  <strong>{{ page.project_role }}</strong>
+        {% endif %}
       </div>
       
       <div class="meta-right-links">

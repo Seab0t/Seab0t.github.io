@@ -9,7 +9,7 @@ share: false
 author_profile: false
 project_role: "Lead Student Researcher"
 github_link: "https://github.com/Seab0t/NbS_tool"
-project_link: "https://bilab.engineering.nyu.edu/projects/cv-based-defects"
+project_link: "https://engineering.nyu.edu/research-innovation/centers/cusp/experiential-learning/capstone-projects/directory/decision-support-tool-urban-overheating"
 gallery_description: How can we optimize urban canopy expansion to mitigate thermal stress in NYC neighborhoods facing the highest heat risk?
 ---
 <div style="border-left: 3px solid #e2e8f0; padding-left: 15px; margin-bottom: 30px; color: #64748b; font-size: 0.9rem; line-height: 1.6;">

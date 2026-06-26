@@ -8,6 +8,7 @@ header:
 share: false
 author_profile: false
 project_role: "Research Assistant"
+project_link: "https://bilab.engineering.nyu.edu/projects/cv-based-defects"
 gallery_description: How to mitigate data scarcity and class imbalance for vision-based detection algorithms in automated façade inspection?
 ---
 <div style="border-left: 3px solid #e2e8f0; padding-left: 15px; margin-bottom: 30px; color: #64748b; font-size: 0.9rem; line-height: 1.6;">

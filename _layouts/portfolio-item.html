@@ -10,58 +10,69 @@ layout: default
     padding: 0 25px;
     color: #1a1a1a;
   }
-  .sticky-project-header {
-    position: sticky; top: 0; background-color: #ffffff; z-index: 100;
-    padding: 30px 0 20px 0; border-bottom: 1px solid rgba(0,0,0,0.08);
+.sticky-project-header {
+    position: sticky; 
+    top: 0; 
+    background-color: #ffffff; 
+    z-index: 100;
+    padding: 35px 0 20px 0; 
+    /* 底部分割线颜色对齐您给出的 #e2e8f0 浅灰 */
+    border-bottom: 1px solid #e2e8f0; 
   }
+  
   .back-to-gallery {
     display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem;
-    text-transform: uppercase; letter-spacing: 0.05em; color: #888;
+    text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; /* 对齐基准灰蓝 */
     text-decoration: none !important; margin-bottom: 20px; transition: all 0.2s ease;
   }
-  .back-to-gallery:hover { color: #000; transform: translateX(-4px); }
+  .back-to-gallery:hover { color: #1a4471; transform: translateX(-4px); }
   
+  /* 项目大标题：降低字重，让它和整体的轻盈感保持一致 */
   .sticky-project-header h1 {
-      font-size: 1.75rem; 
-      font-weight: 500; 
-      line-height: 1.3; 
-      letter-spacing: -0.01em;
-      margin: 0 0 25px 0; 
-      color: #111111;
-    }
-  /* 左右布局容器 */
+    font-size: 1.85rem; 
+    font-weight: 500; 
+    line-height: 1.3; 
+    letter-spacing: -0.01em;
+    margin: 0 0 25px 0; 
+    color: #111111;
+  }
+
+  /* 核心对齐：Flex 布局 */
   .typography-meta-info { 
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; /* 与底部对齐，防止高度错落 */
+    align-items: center;
     width: 100%;
   }
 
-  /* 左侧：Role 块，去掉了以前笨重的灰色 Title */
+  /* 🎯 严格修改：左侧 Role 块全面对齐您的参数 */
   .meta-left-role {
     font-size: 1.05rem;
     font-weight: 400; /* 极致轻盈的正文质感 */
-    color: #444444;
+    color: #64748b;    /* 核心：颜色全部改用您致谢块的 #64748b，消灭突兀的纯黑 */
   }
-  .meta-left-role strong {
-    font-weight: 500; /* 稍微给 Role 的名字一点点存在感即可 */
-    color: #111111;
+  
+  /* 核心：将原本突兀的粗体削减为 500 字重，颜色微调为比周围略深的深灰 */
+  .meta-left-role .role-highlight {
+    font-weight: 500; 
+    color: #333333;
+    margin-left: 2px;
   }
 
   /* 右侧：超链接容器 */
   .meta-right-links {
     display: flex;
-    gap: 25px; /* 链接之间的安全空隙 */
+    gap: 25px; 
   }
   
-  /* 统一蓝黑色极简链接样式 */
+  /* 🎯 严格修改：右侧链接完美卡死在 1.05rem 与 #1a4471 蓝黑 */
   .academic-action-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-size: 1.05rem;
-    font-weight: 500;
-    color: #1a4471 !important; /* 经典蓝黑 */
+    font-size: 1.05rem; /* 严格对齐 1.05rem */
+    font-weight: 500;   /* 严格对齐 500 字重，和左侧高亮绝对平等 */
+    color: #1a4471 !important; 
     text-decoration: none !important;
     transition: opacity 0.2s;
   }

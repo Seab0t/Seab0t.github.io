@@ -34,7 +34,7 @@ layout: default
     line-height: 1.3; 
     letter-spacing: -0.01em;
     margin: 0 0 25px 0; 
-    color: #111111;
+    color: #252525;
   }
 
   /* 核心对齐：Flex 布局 */
@@ -55,7 +55,7 @@ layout: default
   /* 核心：将原本突兀的粗体削减为 500 字重，颜色微调为比周围略深的深灰 */
   .meta-left-role .role-highlight {
     font-weight: 500; 
-    color: #333333;
+    color: #4d4d4d;
     margin-left: 2px;
   }
 
@@ -65,19 +65,19 @@ layout: default
     gap: 25px; 
   }
   
-  /* 🎯 严格修改：右侧链接完美卡死在 1.05rem 与 #1a4471 蓝黑 */
-  .academic-action-link {
+.academic-action-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-size: 1.05rem; /* 严格对齐 1.05rem */
-    font-weight: 500;   /* 严格对齐 500 字重，和左侧高亮绝对平等 */
-    color: #1a4471 !important; 
+    font-size: 1.05rem; 
+    font-weight: 500;   /* 严格对齐 500 字重 */
+    color: #64748b !important; /* 👈 强行抹去蓝黑色，全面对齐 #64748b */
     text-decoration: none !important;
-    transition: opacity 0.2s;
+    transition: color 0.2s;
   }
+  /* 鼠标悬停时才显现标志性的蓝黑色，提供精致的交互反馈 */
   .academic-action-link:hover { 
-    opacity: 0.7; 
+    color: #1a4471 !important; 
     text-decoration: underline !important;
   }
 

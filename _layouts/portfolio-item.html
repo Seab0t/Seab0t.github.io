@@ -20,31 +20,55 @@ layout: default
     text-decoration: none !important; margin-bottom: 20px; transition: all 0.2s ease;
   }
   .back-to-gallery:hover { color: #000; transform: translateX(-4px); }
+  
   .sticky-project-header h1 {
-    font-size: 2rem; font-weight: 500; line-height: 1.2; letter-spacing: -0.02em;
-    margin: 0 0 25px 0; color: #000;
+      font-size: 1.75rem; 
+      font-weight: 500; 
+      line-height: 1.3; 
+      letter-spacing: -0.01em;
+      margin: 0 0 25px 0; 
+      color: #111111;
+    }
+  /* 左右布局容器 */
+  .typography-meta-info { 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* 与底部对齐，防止高度错落 */
+    width: 100%;
   }
-  .typography-meta-info { display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; }
-  .meta-block { display: flex; flex-direction: column; }
-  
-  .meta-title {
-    font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;
-    color: #888; margin-bottom: 6px;
+
+  /* 左侧：Role 块，去掉了以前笨重的灰色 Title */
+  .meta-left-role {
+    font-size: 1.05rem;
+    font-weight: 400; /* 极致轻盈的正文质感 */
+    color: #444444;
   }
-  .meta-detail { font-size: 1.05rem; font-weight: 500; color: #000; }
+  .meta-left-role strong {
+    font-weight: 500; /* 稍微给 Role 的名字一点点存在感即可 */
+    color: #111111;
+  }
+
+  /* 右侧：超链接容器 */
+  .meta-right-links {
+    display: flex;
+    gap: 25px; /* 链接之间的安全空隙 */
+  }
   
-  /* 顶部精致 GitHub 链接样式 */
-  .meta-github-link {
+  /* 统一蓝黑色极简链接样式 */
+  .academic-action-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     font-size: 1.05rem;
     font-weight: 500;
-    color: #1a4471 !important; /* 统一使用你标志性的蓝黑色 */
+    color: #1a4471 !important; /* 经典蓝黑 */
     text-decoration: none !important;
     transition: opacity 0.2s;
   }
-  .meta-github-link:hover { opacity: 0.7; text-decoration: underline !important; }
+  .academic-action-link:hover { 
+    opacity: 0.7; 
+    text-decoration: underline !important;
+  }
   
   .portfolio-content-body { margin-top: 40px; font-size: 1.05rem; line-height: 1.7; }
   .portfolio-content-body h3 {
@@ -164,50 +188,27 @@ layout: default
     <h1>{{ page.title }}</h1>
     
     <div class="typography-meta-info">
-      {% if page.project_role %}
-      <div class="meta-block">
-        <span class="meta-title">Role</span>
-        <span class="meta-detail">{{ page.project_role }}</span>
+      <div class="meta-left-role">
+        {% if page.project_role %}
+          Role: <strong>{{ page.project_role }}</strong>
+        {% endif %}
       </div>
-      {% endif %}
       
-      {% if page.project_time %}
-      <div class="meta-block">
-        <span class="meta-title">Timeline</span>
-        <span class="meta-detail">{{ page.project_time }}</span>
-      </div>
-      {% endif %}
-      
-      {% if page.project_tech %}
-      <div class="meta-block">
-        <span class="meta-title">Tech Stack</span>
-        <span class="meta-detail">{{ page.project_tech }}</span>
-      </div>
-      {% endif %}
-
-      <!-- 🚀 优雅转移：GitHub 图标被精简并封装为一个高档的顶层 Meta Block -->
-      {% if page.github_link %}
-      <div class="meta-block">
-        <span class="meta-title">Code</span>
-        <span class="meta-detail">
-          <a href="{{ page.github_link }}" target="_blank" class="meta-github-link">
-            <svg style="width:16px; height:16px; fill:currentColor; vertical-align: text-bottom;" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.253-.447-1.27.098-2.646 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.376.202 2.394.1 2.646.64.699 1.026 1.591 1.026 2.682 0 3.841-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
-            Repository
+      <div class="meta-right-links">
+        {% if page.github_link %}
+          <a href="{{ page.github_link }}" target="_blank" class="academic-action-link">
+            <svg style="width:16px; height:16px; fill:currentColor; vertical-align: text-top;" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.253-.447-1.27.098-2.646 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.376.202 2.394.1 2.646.64.699 1.026 1.591 1.026 2.682 0 3.841-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            GitHub
           </a>
-         </span>
-      </div>
-      {% endif %}
-      {% if page.project_link %}
-      <div class="meta-block">
-        <span class="meta-title">Deployment</span>
-        <span class="meta-detail">
-          <a href="{{ page.project_link }}" target="_blank" class="meta-github-link">
-            <svg style="width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2; vertical-align: text-bottom;" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-            Project Website
+        {% endif %}
+        
+        {% if page.project_link %}
+          <a href="{{ page.project_link }}" target="_blank" class="academic-action-link">
+            <svg style="width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2; vertical-align: text-top;" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+            Website
           </a>
-        </span>
+        {% endif %}
       </div>
-      {% endif %}
     </div>
   </header>
 

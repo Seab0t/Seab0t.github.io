@@ -45,17 +45,19 @@ layout: default
     width: 100%;
   }
 
-  /* 🎯 严格修改：左侧 Role 块全面对齐您的参数 */
+/* 🎯 终极统一：左侧 Role 样式完全克隆 Back 按钮的字体微表情 */
   .meta-left-role {
-    font-size: 1.05rem;
-    font-weight: 400; /* 极致轻盈的正文质感 */
-    color: #64748b;    /* 核心：颜色全部改用您致谢块的 #64748b，消灭突兀的纯黑 */
+    font-size: 0.9rem;          /* 严格对齐 Back 按钮的 0.9rem */
+    font-weight: 500;           /* 统一为清秀中性的 500 字重，拒绝多余粗体 */
+    color: #64748b;             /* 严格对齐基准灰蓝色 */
+    text-transform: uppercase;  /* 核心：同步大写字母转换，让排版带有一种严谨规整感 */
+    letter-spacing: 0.05em;     /* 核心：拉开字间距，带来精细的杂志呼吸感 */
   }
   
   /* 核心：将原本突兀的粗体削减为 500 字重，颜色微调为比周围略深的深灰 */
   .meta-left-role .role-highlight {
     font-weight: 500; 
-    color: #4d4d4d;
+    color: #1a4471;
     margin-left: 2px;
   }
 
@@ -201,7 +203,7 @@ layout: default
 <div class="typography-meta-info">
       <div class="meta-left-role">
         {% if page.project_role %}
-          Role  <strong>{{ page.project_role }}</strong>
+          Role  {{ page.project_role }}
         {% endif %}
       </div>
       

@@ -2,88 +2,152 @@
 layout: default
 ---
 <style>
-  /* ====== 优化后的头部看板专属 CSS ====== */
+  /* ====== 全局极简代码 ====== */
   .portfolio-page-container {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, Arial, sans-serif;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 25px;
     color: #1a1a1a;
   }
   .sticky-project-header {
-    position: sticky; 
-    top: 0; 
-    background-color: #ffffff; 
-    z-index: 100;
-    padding: 40px 0 25px 0; 
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+    position: sticky; top: 0; background-color: #ffffff; z-index: 100;
+    padding: 30px 0 20px 0; border-bottom: 1px solid rgba(0,0,0,0.08);
   }
   .back-to-gallery {
-    display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem;
-    text-transform: uppercase; letter-spacing: 0.05em; color: #8a8a8a;
-    text-decoration: none !important; margin-bottom: 25px; transition: all 0.2s ease;
+    display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem;
+    text-transform: uppercase; letter-spacing: 0.05em; color: #888;
+    text-decoration: none !important; margin-bottom: 20px; transition: all 0.2s ease;
   }
   .back-to-gallery:hover { color: #000; transform: translateX(-4px); }
-  
-  /* 优化标题：字体稍微秀气一点，减少笨重感 */
   .sticky-project-header h1 {
-    font-size: 1.85rem; 
-    font-weight: 600; 
-    line-height: 1.25; 
-    letter-spacing: -0.02em;
-    margin: 0 0 30px 0; 
-    color: #111111;
+    font-size: 2rem; font-weight: 500; line-height: 1.2; letter-spacing: -0.02em;
+    margin: 0 0 25px 0; color: #000;
   }
-
-  /* 💡 引入响应式网格布局，彻底解决乱换行问题 */
-  .typography-meta-info { 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 25px;
-    width: 100%;
-  }
-
-  /* 如果 Tech Stack 词条很长，允许它跨越更多网格，避免挤压其他元素 */
-  .meta-block.tech-stack-block {
-    grid-column: span 2;
-  }
-
-  /* 优化小标题：更小、间距更宽、颜色更淡，形成强烈的学术杂志级对比 */
+  .typography-meta-info { display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; }
+  .meta-block { display: flex; flex-direction: column; }
+  
   .meta-title {
-    font-size: 0.7rem; 
-    text-transform: uppercase; 
-    letter-spacing: 0.12em;
-    color: #999999; 
-    margin-bottom: 8px;
-    font-weight: 500;
+    font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;
+    color: #888; margin-bottom: 6px;
   }
+  .meta-detail { font-size: 1.05rem; font-weight: 500; color: #000; }
   
-  /* 优化具体内容：字重调轻（500 -> 400或中等），消除笨重感 */
-  .meta-detail { 
-    font-size: 0.98rem; 
-    font-weight: 500; 
-    color: #222222; 
-    line-height: 1.4;
-  }
-  
-  /* 精致超链接样式 */
+  /* 顶部精致 GitHub 链接样式 */
   .meta-github-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    color: #1a4471 !important;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #1a4471 !important; /* 统一使用你标志性的蓝黑色 */
     text-decoration: none !important;
-    font-weight: 600;
     transition: opacity 0.2s;
   }
-  .meta-github-link:hover { opacity: 0.7; }
+  .meta-github-link:hover { opacity: 0.7; text-decoration: underline !important; }
+  
+  .portfolio-content-body { margin-top: 40px; font-size: 1.05rem; line-height: 1.7; }
+  .portfolio-content-body h3 {
+    font-size: 1.3rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1rem; color: #000;
+  }
+  .portfolio-content-body img {
+    margin: 2rem 0; width: 100%; height: auto; border-radius: 4px;
+  }
+  .action-buttons { display: flex; gap: 15px; margin-top: 4rem; margin-bottom: 4rem; }
+  
+  .btn-minimal {
+    display: inline-flex; align-items: center; gap: 8px; padding: 0.7rem 1.4rem;
+    border-radius: 4px; font-weight: 500; font-size: 1.05rem; text-decoration: none !important;
+    transition: all 0.2s;
+  }
+  .btn-outline { background-color: #fff; color: #000 !important; border: 1px solid #ccc; }
+  .btn-outline:hover { border-color: #000; }
+
+  /* ====== 左图右文子项目列表专属 CSS ====== */
+  .subproject-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+    margin-top: 2rem;
+  }
+
+  .subproject-row {
+    display: flex;
+    gap: 30px; 
+    align-items: flex-start; 
+  }
+
+  .subproject-img-wrapper {
+    flex: 0 0 32%;
+    max-width: 300px;
+  }
+
+  .subproject-img-wrapper a {
+    display: block;
+    overflow: hidden; 
+    border-radius: 4px;
+    border: 1px solid #eaeaea; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+  .subproject-img-wrapper img {
+    margin: 0 !important; 
+    width: 100%;
+    display: block;
+    border: none;
+    transition: transform 0.3s ease; 
+  }
+  .subproject-img-wrapper a:hover img {
+    transform: scale(1.03); 
+  }
+
+  .subproject-text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: -3px; 
+  }
+
+  .subproject-title {
+    color: #1a4471; 
+    font-size: 1.2rem; 
+    font-weight: 600;
+    margin: 0 0 6px 0;
+    line-height: 1.4;
+  }
+
+  .subproject-title a {
+    color: #1a4471; 
+    text-decoration: none !important;
+    transition: color 0.2s ease;
+  }
+  .subproject-title a:hover {
+    color: #e74c3c; 
+    text-decoration: underline !important;
+  }
+
+  .subproject-meta {
+    font-size: 0.95rem; 
+    color: #666;
+    margin-bottom: 10px;
+    font-style: italic; 
+  }
+
+  .subproject-desc {
+    font-size: 1.05rem; 
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    text-align: justify; 
+  }
 
   @media (max-width: 768px) {
-    .typography-meta-info {
-      grid-template-columns: repeat(2, 1fr);
+    .subproject-row {
+      flex-direction: column;
+      gap: 15px;
     }
-    .meta-block.tech-stack-block {
-      grid-column: span 2;
+    .subproject-img-wrapper {
+      flex: 0 0 100%;
+      max-width: 100%;
     }
   }
 </style>

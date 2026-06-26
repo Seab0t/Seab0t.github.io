@@ -20,6 +20,7 @@ gallery_description: The critical challenge in automated façade inspection is t
 
 A critical challenge in automated façade inspection is the shortage of labeled images and the irregular occurrence of various defect types, which inherently skews datasets and limits model performance. We are building a multimodal data engine to obtain an extensive empirical dataset from façade inspection reports and generate synthetic data for under-represented defect categories.
 
+### Subprojects
 <div class="subproject-list">
 <div class="subproject-row">
     <div class="subproject-img-wrapper">

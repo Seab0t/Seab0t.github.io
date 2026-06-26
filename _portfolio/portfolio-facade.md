@@ -2,7 +2,7 @@
 title: "A Computer Vision based approach to detect defects on urban building façades"
 collection: portfolio
 layout: portfolio-item
-order: 1
+order: 2
 header:
   teaser: https://Seab0t.github.io/images/FacadeFlow.png
 share: false
